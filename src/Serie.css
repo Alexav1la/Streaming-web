@@ -1,0 +1,30 @@
+.watch-series-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 20px; 
+    padding: 20px;
+    justify-items: center;
+  }
+  
+  .watch-series {
+    text-align: center;
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
+    padding: 10px;
+    width: 200px;
+  }
+  
+  .poster-serie {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+  }
+  
+  h3 {
+    font-size: 16px; 
+    margin-top: 10px; 
+    color: #333;
+  }
+  
+  

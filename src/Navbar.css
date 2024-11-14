@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+}
+
+.nav{
+    background-color: #79a4f8;
+    color: white;
+    height: 70px;
+    width: 100%;
+    padding-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.name{
+    display: flex;
+    margin-left: 12rem;
+    font-size: 45px;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    
+}
+.logout{
+    display: inline-flex;
+    cursor: pointer;
+    margin-right: 8rem;
+    gap: 5rem;
+}
+.logout li{
+    list-style: none;
+} 
+.login{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+.start{
+    background-color: rgb(92, 91, 91);
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+}
+.sub-navbar{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(92, 91, 91);
+}
+.popular{
+    display: flex;
+    align-items: center;
+    font-size: 38px;
+    color: #fff;
+    margin-left: 12rem;
+}
+.Serie{
+    display: grid;
+}
+.name-serie{
+    font-size: 25px;
+    margin-left: 2rem;
+    text-decoration: none;
+    color: black;
+    }
+.movie{
+    display: grid;
+}
+.name-movie{
+    font-size: 25px;
+    margin-left: 1.4rem;
+    text-decoration: none;
+    color: black;
+    }
+
+.Stand{
+    display: flex;
+    margin-left: 12rem;
+    gap: 2rem;
+}
