@@ -2,13 +2,7 @@ import * as React from 'react';
 import { Link} from 'react-router-dom';
 import './Navbar.css';
 
-const Sub = () => {
-    return(
-        <div className="sub-navbar">
-            <h1 className='popular'>Popular Titles</h1>
-        </div>
-    )
-  }
+
 function Nav (){
     return(
         <div className="App">
@@ -21,7 +15,6 @@ function Nav (){
               </ul> 
               </div>
           </header>
-          <Sub/>
         </div>
       )
 }

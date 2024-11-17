@@ -56,9 +56,11 @@ body{
 .popular{
     display: flex;
     align-items: center;
-    font-size: 38px;
+    font-size: 32px;
     color: #fff;
     margin-left: 12rem;
+    margin-top: 0;
+    padding-top: 8px;
 }
 .Serie{
     display: grid;

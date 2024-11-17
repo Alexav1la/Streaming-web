@@ -3,6 +3,7 @@ import './Navbar.css';
 import movie from './images/Movies.png';
 import serie from './images/Serie.png';
 import Nav from './Navbar';
+import Sub from './Subnav';
 
 
 const Serie =() => {
@@ -40,6 +41,7 @@ function Navbar() {
   return (
     <>
     <Nav/>
+    <Sub/>
     <div className='Stand'>
     <Movie/>
     <Serie/> 

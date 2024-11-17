@@ -14,6 +14,9 @@ function Serie(){
     return(
         <>
         <Navbar />
+        <div className="sub-navbar">
+            <h3 className='popular'>Popular Series</h3>
+        </div>
         <div className='watch-series-container'>
           {series.length === 0 ? (
             <li>Cargando...</li>
