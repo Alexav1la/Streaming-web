@@ -3,6 +3,8 @@ import Data from './data.json';
 import Nav from './Navbar';
 import './movie.css';
 import './Navbar.css';
+import './modal.css';
+import Modal from './Modal';
 
 function Movie (){
     const [movies, setMovies] = useState([]);
@@ -11,7 +13,19 @@ function Movie (){
         if (datos) {
             setMovies(datos);
         }
-    },[]);    
+      },[]);
+      const [Modalopen, setModalopen] = useState(false);
+      const [selectedMovie, setSelectedMovie] = useState(null);
+
+      const handleMovieClick = (movie) => {
+        setSelectedMovie(movie);
+        setModalopen(true);
+      };
+      const onClose =()=>{
+        setModalopen(false);
+        setSelectedMovie(null);
+      }
+
     return(
         <>
         <Nav/>
@@ -23,14 +37,29 @@ function Movie (){
             <li>Cargando...</li>
           ) : (
             movies.map((item) => (
-              <article key={item.title} className='watch-movie'>
-                <img src={item.images['Poster Art'].url } alt={item.title} className='poster-movie' width={300} height={300} />
-                <h3>{item.title}</h3>
+              <article 
+                key={item.title}
+                className='watch-movie'
+                >
+                <img src={item.images['Poster Art'].url } 
+                alt={item.title} 
+                className='poster-movie' 
+                width={300}
+                 height={300} 
+                 onClick={() => handleMovieClick(item)}
+                 />
+                <h3> {item.title}</h3>
+                <Modal 
+                 isOpen={Modalopen}
+                 close={onClose}
+                 item={selectedMovie}
+                 />
               </article>
             ))
           )}
-      </div>
+      </div> 
         </>
     )
 }
 export default Movie;
+

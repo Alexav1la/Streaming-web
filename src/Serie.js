@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 import Datos from './data.json'
 import './Serie.css';
 import { useEffect, useState } from 'react';
-
+import Modal from './Modal';
 function Serie(){
     const [ series,setSeries ]= useState([]);
     useEffect (() => {
@@ -11,6 +11,19 @@ function Serie(){
             setSeries(datos); 
         }
     }, []);
+      const [Modalopen,setModalopen] = useState(false);
+      const [selectedSerie,setSelectedSerie ]= useState(null);
+
+      const handleSerieClick = (series)=> {
+        setSelectedSerie (series);
+        setModalopen(true);
+      };
+
+      const onClose =() => {
+        setModalopen(false);
+        setSelectedSerie(null);
+      }
+
     return(
         <>
         <Navbar />
@@ -23,8 +36,20 @@ function Serie(){
           ) : (
             series.map((item) => (
               <article key={item.title} className='watch-series'>
-                <img src={item.images['Poster Art'].url } alt={item.title} className='poster-serie' width={300} height={300} />
+                <img 
+                src={item.images['Poster Art'].url } 
+                alt={item.title} 
+                className='poster-serie'
+                 width={300} 
+                 height={300} 
+                 onClick={()=> handleSerieClick(item)}
+                 />
                 <h3>{item.title}</h3>
+                <Modal
+                isOpen={Modalopen}
+                close={onClose}
+                item={selectedSerie}
+                />
               </article>
             ))
           )}
